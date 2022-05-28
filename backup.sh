@@ -38,9 +38,9 @@ do
 	#Creating md5 file
 	echo $user_md5 > "$DEST_DIR/$md5_file_name"
 
-	#Last run log
-	date +"%m-%d-%Y %H:%M" > "$LOG_DEST_DIR/$LAST_RUN_NAME" 
-
 done
+
+#Last run log
+date +"%m-%d-%Y %H:%M" > "$LOG_DEST_DIR/$LAST_RUN_NAME" 
 
 create_cronjob
