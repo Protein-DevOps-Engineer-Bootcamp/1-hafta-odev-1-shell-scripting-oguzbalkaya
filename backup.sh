@@ -16,7 +16,7 @@ create_cronjob(){
         full_path=`realpath $0`
         crons=`crontab -l 2>&1`
         if [[ $crons != *"$full_path"* ]]; then
-                cron="05 23 * * * $full_path"
+                cron="05 23 * * * root $full_path"
 		(crontab -l ; echo "$cron") | crontab - >> /dev/null
         fi
 }
